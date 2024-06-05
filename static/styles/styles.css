@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+
+.output_string_container
+{
+    overflow-wrap: break-word;
+    border: 2px solid black;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 6px;
+}
+  
+
+p
+{
+    margin: 5px;
+    padding: 5px;
+    font-family: "Roboto Serif", serif;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lentgh_section_container
+{
+    margin-top: 15px;
+}
+
+.mode_section_container
+{
+    margin-top: 20px;
+}
+.section_container
+{
+    margin-top: 20px;
+}
+
+.subsection_name
+{
+    margin: 5px;
+}
+
+.output_string_container_container
+{
+    display: flex;
+    justify-content: center;
+}
+
+.password_string
+{
+    word-break: keep-all;
+    white-space: normal;
+    font-size: 32px;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+input[type='range']{ accent-color: #ed4b71; }
+input[type='checkbox']{ accent-color: #ed4b71; }
+
+
+
+body {
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    justify-content: center;
+}
+
+.mode_buttons_cont
+{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    width: 100%;
+    gap: 4%;
+    height: 50px;
+    /* margin: 10px; */
+}
+
+.subsection_name
+{
+    font-family: "Roboto Serif", serif;
+    font-size: 23px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.action_button
+{
+    font-family: "Roboto Serif", serif;
+    font-size: 21px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.title_qg
+{
+    font-family: "Roboto Serif", serif;
+    font-size: 32px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+/* .mode_section_container
+{
+    display: flex;
+    justify-content: center;
+} */
+
+.flex_container {
+    display: flex;
+    align-items: center; 
+    gap: 10px
+}
+
+.action_buttons_cont
+{
+    display: grid;
+    grid-template-columns: 20% 52% 20%;
+    width: 100%;
+    gap: 4%;
+    height: 50px;
+    margin: 6px;
+}
+
+
+
+.slider_block
+{
+    display: grid;
+    grid-template-columns: 27% 11% 62%;
+    width: 100%;
+    text-align: left;
+}
+
+.lentgh_section_container
+{
+    margin-inline: 30px;
+}
+
+.mode_section_container
+{
+    margin-inline: 30px;
+}
+
+.section_container
+{
+    margin-inline: 30px;
+}
+
+.action_section_container
+{
+    margin-inline: 30px;
+}
+
+.output_string_container_container
+{
+    margin-inline: 30px;
+}
+
+.slider_block_len
+{
+    display: grid;
+    grid-template-columns: 27% 11% 62%;
+    width: 100%;
+    text-align: left;
+}
+
+.section_title_container
+{
+    display: flex;
+    justify-content: center;
+}
+
+.header_logo_cont
+{
+    display: flex;
+    justify-content: center;
+}
+
+.action_section_container
+{
+    display: flex;
+    justify-content: center;
+}
+
+.bottom_one
+{
+    margin-bottom: 20px;
+}
+
+/* .counter
+{
+    width: 10px;
+    text-align: center;
+    display: inline-block;
+} */
+
+.panel
+{
+    margin-top: 50px;
+    /* margin-inline: 10%; */
+    width: 500px;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    border: 1px solid #afafaf;
+    border-radius: 12px;
+    display: flex;
+    margin-inline: 4px;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    /* align-items: center; */
+    height: 100%; /* Ensure it takes full height of the row */
+    /* text-align: center; */
+    box-shadow: 5px 5px 10px rgb(151, 151, 151);
+}

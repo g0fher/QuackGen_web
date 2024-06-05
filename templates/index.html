@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/styles.css') }}">
+
+    <title>QuackGen</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <div class="panel">
+        <div class="section_title_container">
+            <div class="header_title_cont">
+                <h1 class="title_qg">- QuackGen -</h1>
+            </div>
+        </div>
+
+        <div class="action_section_container">
+            <div class="action_buttons_cont">
+                <button onclick="reset()" class="action_button" id="reset_button">Reset</button>
+                <button onclick="generate_string()" class="action_button">Generate</button>
+                <button onclick="copy()" class="action_button" id="copy_button">Copy</button>
+            </div>
+        </div>
+        
+        <div class="output_string_container_container">
+            <div class="output_string_container">
+                <p id="generated_string_output" class="password_string">Select mode below</p>
+            </div>
+        </div>
+
+        <div class="lentgh_section_container">
+            <div class="slider_block_len">
+                <p class="standart_label">Length</p>
+                <p id="length_value">8</p>
+                <input type="range" id="slider_length" min="0" max="20" value="8" class="slider" oninput="on_slider(-1)">
+            </div>
+        
+            <div class="advanced_sub_section flex_container">
+                <p class="standart_label">Increase range</p>
+                <input type="checkbox" name="length_increase_checkbox" id="length_increase_checkbox" oninput="on_checker_box_length_increase()">
+            </div>
+        </div>
+
+        <div class="mode_section_container">
+            <div class="section_title_container">
+                <h3 class="subsection_name">Generation mode</h3>
+            </div>
+            <div class="mode_buttons_cont">
+                <button onclick="set_generation_mode('random')" class="action_button" id="btn_mode_random">Standart</button>
+                <button onclick="set_generation_mode('readable')" class="action_button" id="btn_mode_redable">Advanced</button>
+            </div>
+            
+            <div class="advanced_sub_section flex_container">
+                <p class="standart_label" id="label_cluster_sep">Cluster separation</p>
+                <input type="checkbox" name="cluster_separation_checkbox" id="cluster_separation_checkbox" oninput="on_checker_box_cluster_sep()">
+            </div>
+        </div>
+
+        <div class="section_container bottom_one">
+            <div class="section_title_container">
+                <h3 class="subsection_name">Weights of groups</h3>
+            </div>
+            <div class="subsection_container">
+                <div class="slider_block">
+                    <p class="standart_label">Lowercase</p>
+                    <p class="standart_label" id="weight_lowercase_value">20</p>
+                    <input type="range" id="lowercase_slider" min="0" max="20" value="20" class="slider" oninput="on_slider(0)">
+                </div>
+                <div class="slider_block">
+                    <p class="standart_label">Uppercase</p>
+                    <p class="standart_label" id="weight_uppercase_value">0</p>
+                    <input type="range" id="uppercase_slider" min="0" max="20" value="0" class="slider" oninput="on_slider(1)">
+                </div>
+                <div class="slider_block">
+                    <p class="standart_label">Numbers</p>
+                    <p class="standart_label" id="weight_numbers_value">10</p>
+                    <input type="range" id="numbers_slider" min="0" max="20" value="10" class="slider" oninput="on_slider(2)">
+                </div>
+                <div class="slider_block">
+                    <p class="standart_label">Punctuation</p>
+                    <p class="standart_label" id="weight_punctuation_value">0</p>
+                    <input type="range" id="punctuation_slider" min="0" max="20" value="0" class="slider" oninput="on_slider(3)">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
